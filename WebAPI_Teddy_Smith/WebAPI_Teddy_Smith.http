@@ -1,0 +1,6 @@
+@WebAPI_Teddy_Smith_HostAddress = http://localhost:5001
+
+GET {{WebAPI_Teddy_Smith_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
