@@ -1,4 +1,9 @@
 
+using Microsoft.EntityFrameworkCore;
+using WebAPI_Teddy_Smith.Data;
+using WebAPI_Teddy_Smith.Interface;
+using WebAPI_Teddy_Smith.Repository;
+
 namespace WebAPI_Teddy_Smith
 {
     public class Program
@@ -13,7 +18,8 @@ namespace WebAPI_Teddy_Smith
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
+            builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddScoped<IPokemonRepository,PokemonRepository>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
