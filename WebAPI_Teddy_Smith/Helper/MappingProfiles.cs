@@ -12,6 +12,8 @@ namespace WebAPI_Teddy_Smith.Helper
             CreateMap<Category, CategoryDTO>();
             CreateMap<Country, CountryDTO>();
             CreateMap<Owner,OwnerDTO>();
+            CreateMap<Review, ReviewDTO>();
+            CreateMap<Reviewer, ReviewerDTO>;
         }
     }
 }
