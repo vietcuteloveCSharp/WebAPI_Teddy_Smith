@@ -11,7 +11,7 @@ namespace WebAPI_Teddy_Smith.Helper
             CreateMap<Pokemon, PokemonDTO>();
             CreateMap<Category, CategoryDTO>();
             CreateMap<Country, CountryDTO>();
-            
+            CreateMap<Owner,OwnerDTO>();
         }
     }
 }
